@@ -1,32 +1,104 @@
 body {
     font-family: sans-serif;
     margin: 0;
-    padding: 0;
 }
 
-main {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 1em;
+header, footer {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center; /* Centraliza o conteúdo */
 }
 
-section {
-    margin-bottom: 2em;
-}
-
-#video-inicial video, #video-final video {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-}
-
-.galeria {
+.video-destaque-container {
     display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+.video-destaque {
+    text-align: center; /* Centraliza o conteúdo do vídeo e texto */
+}
+
+video, iframe {
+    width: 560px; /* Largura padrão do YouTube */
+    height: 315px; /* Altura padrão do YouTube */
+    margin-right: 20px;
+}
+
+.botao {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Estilos do slider */
+.slider {
+    position: relative;
+    width: 600px;
+    margin: 0 auto;
     overflow: hidden;
 }
 
-.galeria img {
+.slide {
     width: 100%;
-    flex-shrink: 0;
-    transition: transform 0.5s ease-in-out;
+    display: none;
+}
+
+.slide:first-child {
+    display: block;
+}
+
+.slide img {
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.slide img:hover {
+    transform: scale(1.1);
+}
+
+.slide p {
+    text-align: center;
+}
+
+.indicadores {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.indicadores span {
+    width: 10px;
+    height: 10px;
+    background-color: gray;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+/* Estilos dos tópicos */
+.topicos {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.topico {
+    width: 45%;
+    transition: transform 0.3s ease;
+}
+
+.topico:hover {
+    transform: translateY(-5px);
+}
+
+.topico img {
+    width: 100%;
+}
+
+.video-institucional {
+    text-align: center; /* Centraliza o vídeo institucional */
 }

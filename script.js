@@ -1,13 +1,28 @@
-const galeria = document.querySelector('.galeria');
-const fotos = document.querySelectorAll('.galeria img');
-let contador = 0;
+const slider = document.querySelector('.slider');
+const slides = slider.querySelectorAll('.slide');
+const indicadores = slider.querySelectorAll('.indicadores span');
+let indiceAtual = 0;
 
-function slideshow() {
-    contador++;
-    if (contador >= fotos.length) {
-        contador = 0;
-    }
-    galeria.style.transform = `translateX(-${contador * 100}%)`;
+function mostrarSlide(indice) {
+    slides.forEach((slide, i) => {
+        slide.style.display = i === indice ? 'block' : 'none';
+    });
+
+    indicadores.forEach((indicador, i) => {
+        indicador.style.backgroundColor = i === indice ? 'blue' : 'gray';
+    });
 }
 
-setInterval(slideshow, 3000);
+function proximoSlide() {
+    indiceAtual = (indiceAtual + 1) % slides.length;
+    mostrarSlide(indiceAtual);
+}
+
+setInterval(proximoSlide, 3000);
+
+indicadores.forEach((indicador, i) => {
+    indicador.addEventListener('click', () => {
+        indiceAtual = i;
+        mostrarSlide(indiceAtual);
+    });
+});
