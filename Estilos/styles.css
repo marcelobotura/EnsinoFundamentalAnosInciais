@@ -1,0 +1,119 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+header, footer {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+.video-destaque-container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+.video-destaque {
+    text-align: center; /* Centraliza o conteúdo do vídeo e texto */
+}
+
+/* Vídeo maior (destaque) */
+.video-grande {
+    width: 400px;
+    height: 400px;
+    border-radius: 16px; /* Borda arredondada */
+    overflow: hidden; /* Garante que o conteúdo respeite a borda */
+    position: relative; /* Necessário para posicionar o ícone de play */
+    
+}
+.video-grande {
+    box-sizing: border-box;
+    background-color: #fff; /* (opcional) cor de fundo */
+    padding: 15px; /* (opcional) espaço interno */
+    border-radius: 8px;
+    
+}
+
+/* Vídeo menor (institucional) */
+
+
+.video-pequeno {
+    width: 720px;
+    height: 405px;
+    border-radius: 16px; /* Borda arredondada */
+    overflow: hidden; /* Garante que o conteúdo respeite a borda */
+    position: relative; /* Necessário para posicionar o ícone de play */
+}
+
+.video-pequeno {
+    box-sizing: border-box;
+    background-color: #fff; /* (opcional) cor de fundo */
+    padding: 15px; /* (opcional) espaço interno */
+    border-radius: 8px;
+}
+
+.botao {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+.indicadores {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.indicadores span {
+    width: 10px;
+    height: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+/* Estilos dos tópicos */
+.topicos {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os tópicos quebrem linha */
+    justify-content: center; /* Centraliza os tópicos horizontalmente */
+    gap: 20px; /* Espaço entre os tópicos */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.topico {
+    flex: 1 1 300px; /* Tenta manter 300px, mas adapta conforme o espaço */
+    min-width: 250px;  /* Mínimo ideal para celular */
+    max-width: 500px;  /* Máximo ideal para site grande */
+    transition: transform 0.3s ease;
+    box-sizing: border-box;
+    background-color: #fff; /* (opcional) cor de fundo */
+    padding: 15px; /* (opcional) espaço interno */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* (opcional) leve sombra */
+}
+
+.topico:hover {
+    transform: translateY(-5px);
+}
+
+.topico img {
+    width: 100%;
+    border-radius: 12px;
+    display: block;
+}
+
+
+
+.video-institucional {
+    text-align: center; /* Centraliza o vídeo institucional */
+}
+
